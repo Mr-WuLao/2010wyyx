@@ -1,0 +1,53 @@
+@charset "UTF-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 12px;
+  font-family: "微软雅黑"; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+ul, ol, li {
+  list-style: none; }
+
+em, i {
+  font-style: normal; }
+
+b, strong {
+  font-weight: normal; }
+
+a, u {
+  text-decoration: none; }
+
+img {
+  border: 0;
+  vertical-align: middle; }
+
+input {
+  outline: none; }
+
+/* 公共样式 */
+.border_none {
+  border: none !important; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.bg_none {
+  background: none !important;
+  /*清除背景*/ }
+
+.clearfix::after {
+  content: ' ';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+  visibility: hidden; }
