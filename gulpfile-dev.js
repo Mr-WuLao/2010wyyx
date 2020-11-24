@@ -54,5 +54,5 @@ task('connect', async ()=>{
     port: 3000
   })
 })
-
 task('dev', series('delDist','img','html','script','sass','connect','watch'))
+// task('dev', parallel('delDist','img','html','script','sass','connect','watch'))按顺序依次打包文件

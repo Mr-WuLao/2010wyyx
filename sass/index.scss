@@ -1,149 +1,8 @@
-.header, .logo, .nav,.banner {
+.banner, .case, .drink,.serve, .footer {
     width: 1090px;
     margin: 0 auto;
 }
-/* 头部导航 */
-#header {
-    background: #333333;
-}
-.header {
-    height: 36px;
-    background: url(../img/trumpet.gif) no-repeat 0 center;
-    a {
-        line-height: 36px;
-        font-size: 12px;
-        color: #cc9756;
-        text-decoration: underline;
-        margin-left: 28px;
-    }
-    .header-right {
-        margin-top: 8px;
-        overflow: hidden;
-        li {
-            height: 20px;
-            border-right: 1px solid #ccc;
-            float: left;
-            a {
-                margin: 0 10px;
-                line-height: 16px;
-                color: #ccc;
-                text-decoration: none;
-                &:hover{
-                    color: #fff;
-                }
-            }
-        }
 
-    }
-    .header-right span {
-        margin: 5px 10px 0 0;
-        display: inline-block;
-        width: 9px;
-        height: 5px;
-        background: url(../img/3.png) no-repeat;
-        background-position: -1px -690px;
-    }
-    .header-right .header-right-border {
-        border: 0;
-        padding-left: 13px;
-        background: url(../img/phone.jpg) no-repeat 10px 6px;
-        // background-position: 0px -169px;
-
-    }
-
-}
-/* logo区域 */
-.logo {
-    height: 90px;
-    padding-top: 26px;
-    margin-bottom: 18px;
-    h1 a {
-        display: block;
-        width: 210px;
-        height: 50px;
-        text-indent: -9999px;
-        background: url(../img/3.png) no-repeat;
-        background-position: -1px -303px;
-        margin-right: 163px;
-    }
-    .logo-form {
-        overflow: hidden;
-        input {
-            float: left;
-            height: 36px;
-            width: 440px;
-            border: 1px solid #cc9756;
-            border-radius: 18px 0 0 18px;
-            padding-left: 25px;
-        }
-        button {
-            float: left;
-            background: #cc9756;
-            width: 90px;
-            height: 40px;
-            text-align: center;
-            line-height: 40px;
-            border: 0;
-            border-radius: 0 20px 20px 0;
-            cursor: pointer;
-        }
-    }
-    .logo-shopping {
-        border: 1px solid #cc9756;
-        width: 132px;
-        height: 36px;
-        position: relative;
-        text-align: center;
-        line-height: 36px;
-        border-radius: 18px;
-        background: url(../img/3.png) no-repeat 22px 8px;
-        background-position: 14px -140px;
-        span {
-            position: absolute;
-            right: 16px;
-            top: 7px;
-            display: block;
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
-            background: #cd2728;
-            line-height: 20px;
-            text-align: center;
-            color: #fff;
-        }
-    }
-}
-/* 导航条nav */
-.nav {
-    height: 31px;
-    overflow: hidden;
-}
-.nav>li {
-    height: 28px;
-    border-bottom: 3px solid #fff;
-    float: left;
-    margin-right: 46px;
-    position: relative;
-    &>a {
-        color: #000;
-        line-height: 28px;
-        cursor: pointer;
-    }
-    .nav2 {
-         position: absolute;
-        top: 31px; 
-        display: none;
-    }
-}
-.nav>li:hover {
-    border-color: #cc9756;
-    }
-.nav>li:hover .nav2 {
-    display: block;
-    } 
-.nav-margin-right {
-    margin-right: 0;
-}
 /*<!-- banner图 -->  */
 .banner {
     height: 418px;
@@ -153,7 +12,149 @@
     width: 1090px;
     height: 418px;
 }     
- 
+/* <!-- case案例 --> */
+.case {
+    height: 542px;
+    position: relative;
+    padding-top: 12px;
+    .case-news {
+        position: absolute;
+        right: 0;
+        top: 32px;
+        cursor: pointer;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 66px;
+        height: 66px;
+        font-weight: bold;
+        span {
+            font-weight: none;
+            font-size: 12px;
+            line-height: 50px;
+            margin-left: 10px;
+            color: #333;
+        }
+    }
+    .case-main {
+        overflow: hidden;
+        display: flex;
+        margin-bottom: 100px;
+        .case-imgs {
+            float: left;
+            width: 265px;
+            margin-right: 10px;
+            dt {
+                background: #f4f4f4;
+            }
+            dd {
+                padding-top: 34px;
+                width: 100%;
+                i{
+                    font-size: 16px;
+                    text-align: center;
+                    color: #e36844;
+                    display: block;
+                }
+                p {
+                    margin-left: 50px;
+                    width: 170px;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                span {
+                    text-align: center;
+                    display: block;
+                    color: red;
+                    font-size: 16px;
+                    em {
+                        text-decoration: line-through;
+                        font-size: 12px;
+                        color: #ccc;
+                    }
+                }
+            }
+            &:hover dt,&:hover dd{
+                background: #ccc;
+            }
+        }
+        
+    }
+   
+}
+/* 美食酒水 */
+.drink {
+    min-height: 796px;
+    position: relative;
+    background: #f4f0ea;
+    .drink-news {
+        position: absolute;
+        right: 0;
+        top: 32px;
+        cursor: pointer;
+    }
+    .drink-header {
+        h2 {
+            font-size: 28px;
+            line-height: 66px;
+            height: 66px;
+            font-weight: bold;
+        }
+        
+        p {
+            margin-right: 85px;
+            a {
+                margin: 0 5px;
+                color: #000;
+                line-height: 80px;
+            }
+        }   
+    }
+    &>img {
+        width: 100%;
+        height: 310px;
+    }
+    .drink-footer {
+        margin-top:20px;
+        min-height: 360px;
+        width: 1110px;
+        dl {
+            width: 265px;
+            float: left;
+            margin-right: 10px;
+            dt {
+                width: 265px;
+                height: 265px;
+            }
+            dd {
+                padding-top: 30px;
+                position: relative;
+               p {
+                    width: 163px;
+                    line-height: 20px;
+                    text-align: center;
+                    margin-left: 45px;
+                    span {
+                        display: block;
+                        text-align: center;
+                        color: red;
+                        font-size: 14px;
+                    }
+               }
+               em {
+                   position: absolute;
+                   top: 8px;
+                   left: 104px;
+                   color: #fff;
+                   background: #e36844;
+               }
+            }
+        }
+    }
+    
+}
+
 
 
 

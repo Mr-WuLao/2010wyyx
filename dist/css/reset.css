@@ -31,6 +31,9 @@ input {
   outline: none; }
 
 /* 公共样式 */
+* {
+  box-sizing: border-box; }
+
 .border_none {
   border: none !important; }
 

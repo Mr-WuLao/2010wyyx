@@ -1,0 +1,240 @@
+.header, .logo, .nav,.serve, .footer {
+    width: 1090px;
+    margin: 0 auto;
+}
+/* 头部导航 */
+#header {
+    background: #333333;
+}
+.header {
+    height: 36px;
+    background: url(../img/trumpet.gif) no-repeat 0 center;
+    a {
+        line-height: 36px;
+        font-size: 12px;
+        color: #cc9756;
+        text-decoration: underline;
+        margin-left: 28px;
+    }
+    .header-right {
+        margin-top: 8px;
+        overflow: hidden;
+        li {
+            height: 20px;
+            border-right: 1px solid #ccc;
+            float: left;
+            a {
+                margin: 0 10px;
+                line-height: 16px;
+                color: #ccc;
+                text-decoration: none;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+    .header-right span {
+        margin: 5px 10px 0 0;
+        display: inline-block;
+        width: 9px;
+        height: 5px;
+        background: url(../img/3.png) no-repeat;
+        background-position: -1px -690px;
+    }
+    .header-right .header-right-border {
+        border: 0;
+        padding-left: 13px;
+        background: url(../img/phone.jpg) no-repeat 10px 3px;
+        // background-position: 0px -169px;
+
+    }
+
+}
+/* logo区域 */
+.logo {
+    height: 90px;
+    padding-top: 26px;
+    margin-bottom: 18px;
+    h1 a {
+        display: block;
+        width: 210px;
+        height: 50px;
+        text-indent: -9999px;
+        background: url(../img/3.png) no-repeat;
+        background-position: -1px -303px;
+        margin-right: 163px;
+    }
+    .logo-form {
+        overflow: hidden;
+        input {
+            float: left;
+            height: 36px;
+            width: 440px;
+            border: 1px solid #cc9756;
+            border-radius: 18px 0 0 18px;
+            padding-left: 25px;
+        }
+        button {
+            float: left;
+            background: #cc9756;
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 0;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+    }
+    .logo-shopping {
+        border: 1px solid #cc9756;
+        width: 132px;
+        height: 36px;
+        position: relative;
+        text-align: center;
+        line-height: 36px;
+        border-radius: 18px;
+        background: url(../img/3.png) no-repeat 22px 8px;
+        background-position: 14px -140px;
+        span {
+            position: absolute;
+            right: 16px;
+            top: 7px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #cd2728;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
+/* 导航条nav */
+.nav {
+    position: relative;
+    z-index: 10;
+    height: 31px;
+    // overflow: hidden;
+}
+.nav>li {
+    height: 28px;
+    border-bottom: 3px solid #fff;
+    float: left;
+    margin-right: 45px;
+    position: relative;
+    &>a {
+        color: #000;
+        line-height: 28px;
+        cursor: pointer;
+    }
+    .nav2 {
+        position: absolute;
+        display: none;
+        background: #fff;
+    }
+}
+.nav li:hover {
+    border-color: #cc9756;
+    }
+.nav li:hover .nav2 {
+    display: block;
+    //z-index: 999;
+    } 
+.nav-margin-right {
+    margin-right: 0;
+}
+
+
+/* serve 服务*/
+.serve {
+    height: 300px;
+    margin-top: 58px;
+    // margin-bottom:40px;
+    h4 {
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+    .serve-left {
+        width: 362px;
+        span {
+            display: inline-block;
+            width: 80px;
+            height: 98px;
+            border: 1px solid #e8e8e8;
+            padding-top: 50px;
+            margin-right: 25px;
+            background: url(../img/serve_05.jpg) no-repeat 26px 27px;
+            a {
+                line-height: 48px;
+                font-size: 14px;
+                padding-left: 10px;
+            }
+        }
+        & span:nth-child(2) {
+            margin-left: 86px;
+            background: url(../img/serve_03.jpg) no-repeat 26px 27px;
+        }
+    }
+    .serve-center {
+        width: 364px;
+        border-left:1px solid #e9e9e9 ;
+        border-right:1px solid #e9e9e9 ;
+        padding: 0 36px;
+        p {
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        span {
+            line-height: 36px;
+        }
+        a {
+            margin-left: 16px;
+        }
+    }
+    .serve-rigjt {
+        width: 362px;
+    }
+}
+/* footer */
+.footer {
+    height: 272px;
+    background: #414141;
+    border-top: 1px solid #414141;
+    .footer-header {
+        margin-top: 38px;
+        display: flex;
+        padding: 0 15px;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #4f4f4f;
+        div {
+            span {
+                font-size: 18px;
+                line-height: 50px;
+                color:#fff;
+                margin-left: 10px;
+            }
+        }
+    }
+    .footer-list {
+        margin-top: 20px;
+        text-align: center;
+        color: #999;
+        line-height: 30px;
+        a {
+            color: #999;
+            margin: 0 10px;
+        }
+    }
+    .footer-f {
+        line-height: 30px;
+        color: #999;
+        text-align: center;
+    }
+}
