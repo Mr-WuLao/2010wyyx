@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>网易严选</title>
+<title>网易严选首页</title>
 <link rel="stylesheet" href="./css/reset.css">
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/index.css">
@@ -16,7 +16,7 @@
     <div class="header">
         <a href="#">关于防范近期不法分子冒充客服实施诈骗的公告</a>
         <ul class="header-right right">
-            <li><a href="#">登陆/注册</a></li>
+            <li><a href="javascript:;" class="header-login">登陆/注册</a></li>
             <li><a href="#">我的订单</a></li>
             <li><a href="#">会员</a></li>
             <li><a href="#">甄选家</a></li>
@@ -26,6 +26,16 @@
         </ul>
     </div>
   </div>
+  <div class="header-mask"></div>
+<!-- /* 账号登陆界面 */ -->
+<div class="login">
+    <h2>账户登陆</h2>
+   账号： <input type="text" class="login-txt"> <br>
+   密码： <input type="password" class="login-password"> <br>
+   <input type="checkbox" class="login-checkbox"> 记住密码
+   <button class="login-btn">登陆</button>
+   <span class="close">×</span>
+</div>
   <!-- /* logo区域 */ -->
   <div class="logo clearfix">
       <h1 class="left"><a href="#" title="网易严选">网易严选</a></h1>
@@ -261,6 +271,8 @@
     </p>
 </div>
 <script src="./js/swiper.min.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>

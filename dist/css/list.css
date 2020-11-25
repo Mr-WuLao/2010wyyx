@@ -1,3 +1,71 @@
-h2 {
-  color: blue;
-  width: 400px; }
+@charset "UTF-8";
+/* 公共样式 */
+.list-nav, .main {
+  width: 1090px;
+  margin: 0 auto; }
+
+body {
+  background: #eee;
+  height: 100%; }
+
+.list-nav {
+  background: #eee;
+  line-height: 50px; }
+  .list-nav a {
+    margin: 0 10px; }
+
+/* 商品展示 */
+.main {
+  background: #fff;
+  padding: 0 36px; }
+  .main .main-list {
+    padding-top: 30px; }
+    .main .main-list .main-list-keyword {
+      margin: 0 60px 50px;
+      position: relative;
+      line-height: 24px; }
+      .main .main-list .main-list-keyword span {
+        position: absolute;
+        left: -50px;
+        top: 0px; }
+      .main .main-list .main-list-keyword a {
+        margin: 0 10px; }
+  .main .main-show {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .main .main-show dl {
+      margin-bottom: 50px; }
+      .main .main-show dl img {
+        width: 245px;
+        height: 245px; }
+      .main .main-show dl dd {
+        padding-top: 40px;
+        padding-bottom: 20px; }
+        .main .main-show dl dd a {
+          display: block;
+          font-size: 14px;
+          margin-left: 40px;
+          text-align: center;
+          font-weight: bold;
+          width: 164px; }
+        .main .main-show dl dd span {
+          position: relative;
+          display: block;
+          text-align: center;
+          color: red;
+          font-size: 14px;
+          line-height: 40px; }
+          .main .main-show dl dd span em {
+            position: absolute;
+            bottom: 0;
+            left: 65px;
+            width: 110px;
+            height: 1px;
+            background: #ccc; }
+        .main .main-show dl dd p {
+          text-align: center;
+          line-height: 48px;
+          color: #999; }
+      .main .main-show dl:hover dd, .main .main-show dl:hover dt {
+        background: #ccc; }

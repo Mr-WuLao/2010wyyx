@@ -3,7 +3,9 @@ html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, l
     margin:0;
     padding:0;
 }
-body {
+body, html {
+    width: 100%;
+    height: 100%;
     font-size:12px;
     font-family: "微软雅黑";
 }
@@ -22,6 +24,7 @@ b, strong {
 }
 a, u {
     text-decoration: none;
+    color: #000;
 }
 img {
     border:0;
