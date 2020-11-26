@@ -297,3 +297,86 @@
         text-align: center;
     }
 }
+/* <!-- 热销榜hotList --> */
+.hotList {
+    position: absolute;
+    left: 150px;
+    top: 620px;
+    width: 80px;
+    // height: 350px;
+    border: 1px solid #ccc;
+    h3 {
+        color: red;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        background: #ccc;
+    }
+    p a {
+        display: block;
+        text-align: center;
+        line-height: 36px;
+        border-top: 1px solid #eee;
+        font-size: 12px;
+
+    }
+    & p:hover a {
+        color: red;
+    }
+}
+/* 新人福利 */
+.scan {
+    position: absolute;
+    top: 620px;
+     right: 0;
+    width: 70px;
+    .scan-QR {
+        width: 70px;
+        img {
+            width: 70px;
+            height: 70px;
+        }
+        span {
+            display: block;
+            padding: 0 7px;
+            color: red;
+            font-size: 14px;
+        }
+    }
+    .scan-serve {
+        height: 80px;
+        border-top: 1px solid #ccc;
+        padding-top: 10px; 
+        em {
+            display: block;
+            width: 31px;
+            height: 26px;
+            margin-left: 22px;
+        }
+        a {
+            line-height: 28px;
+            color:#ccc;
+            padding: 0 10px;
+        }
+    }
+    .scan-footer {
+        border-top: 1px solid #ccc;
+        height: 70px;
+        span {
+            display: block;
+            width: 24px;
+            height: 14px;
+            margin-left: 24px;
+            margin-top: 20px;
+            background: url(../img/1.png) no-repeat;
+            background-position: 0 -300px;
+        }
+        a {
+            line-height: 28px;
+            color:#ccc;
+            padding: 0 16px;
+        }
+    }
+}

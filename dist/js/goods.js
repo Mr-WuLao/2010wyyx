@@ -52,23 +52,3 @@ login_btn.onclick = function () {
     alert('登陆成功');
   }
 };
-/* 热销榜 */
-
-/* <!-- 新人福利 --> */
-
-
-var scan = document.querySelector('.scan');
-var hotList = document.querySelector('.hotList');
-/* 获取元素最开始的top值 */
-
-var hotlistW = offset(hotList).top; // console.log(hotlistW)
-
-window.onscroll = function () {
-  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-  if (hotlistW <= scrollTop) {
-    /* 当符合条件，则产生吸顶效果 */
-    scan.style.top = scrollTop + 'px';
-    hotList.style.top = scrollTop + 'px';
-  }
-};
