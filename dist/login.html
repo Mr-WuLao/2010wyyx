@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录/注册</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/iconfont.css">
+<link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <!-- /* 头部导航 */ -->
+  <div id="header">
+    <div class="header">
+        <a href="#">关于防范近期不法分子冒充客服实施诈骗的公告</a>
+        <ul class="header-right right">
+            <li class="header-login">登陆/注册</li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">会员</a></li>
+            <li><a href="#">甄选家</a></li>
+            <li><a href="#">企业采购</a> <span></span></li>
+            <li><a href="#">客户服务</a><span></span></li>
+            <li class="header-right-border"><a href="#">APP</a></li>
+        </ul>
+    </div>
+  </div>
+  <!-- /* logo区域 */ -->
+  <div class="logo clearfix">
+      <h1 class="left"><a href="#" title="网易严选">网易严选</a></h1>
+      <div class="logo-form left">
+        <input type="text" placeholder="9.9元超值区">
+          <button>搜索</button>
+      </div>
+      <div class="logo-shopping right">购物车
+        <span>0</span>
+      </div>
+  </div>
+  <!-- /* 导航条nav */ -->
+  <ul class="nav">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">居家生活</a></li>
+    <li>
+        <a href="#">服饰鞋包</a>
+        <div class="nav2">
+            <ul class="nav2-ul2 left">
+                <h3>当季热销</h3>
+                <li>好物上新</li>
+                <li>热销爆款</li>
+                <li>超低特惠</li>
+                <li>服饰鞋包疯抢74时</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>男装</h3>
+                <li>男式外套</li>
+                <li>男式针织衫/卫衣</li>
+                <li>男式裤装</li>
+                <li>男式衬衫</li>
+                <li>男式牛仔</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>女装</h3>
+                <li>女式外套</li>
+                <li>女式针织衫/卫衣/卫衣</li>
+                <li>女式牛仔</li>
+                <li>女式裤装</li>
+                <li>女式TsAr nOLO</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>运动户外服</h3>
+                <li>女式户外服</li>
+                <li>男式户外服装/卫衣</li>
+                <li>男式运动外套/卫衣</li>
+                <li>男式运动裤装</li>
+                <li>女式运动裤</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>箱包</h3>
+                <li>行李箱</li>
+                <li>女士包袋</li>
+                <li>男士包袋</li>
+                <li>钱包及小皮件</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>首饰配件</h3>
+                <li>奢华珠宝</li>
+                <li>时尚饰品</li>
+                <li>围巾手套</li>
+                <li>帽子发饰</li>
+                <li>腰带腕表</li>
+                <li>眼镜墨镜</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="#">美食酒水</a>
+        <div class="nav2">
+            <ul class="nav2-ul2 left">
+                <h3>美食酒水</h3>
+                <li>好物上新</li>
+                <li>热销爆款</li>
+                <li>超低特惠</li>
+                <li>服饰鞋包疯抢74时</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>男装</h3>
+                <li>男式外套</li>
+                <li>男式针织衫/卫衣</li>
+                <li>男式裤装</li>
+                <li>男式衬衫</li>
+                <li>男式牛仔</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>女装</h3>
+                <li>女式外套</li>
+                <li>女式针织衫/卫衣/卫衣</li>
+                <li>女式牛仔</li>
+                <li>女式裤装</li>
+                <li>女式TsAr nOLO</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>运动户外服</h3>
+                <li>女式户外服</li>
+                <li>男式户外服装/卫衣</li>
+                <li>男式运动外套/卫衣</li>
+                <li>男式运动裤装</li>
+                <li>女式运动裤</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>箱包</h3>
+                <li>行李箱</li>
+                <li>女士包袋</li>
+                <li>男士包袋</li>
+                <li>钱包及小皮件</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>首饰配件</h3>
+                <li>奢华珠宝</li>
+                <li>时尚饰品</li>
+                <li>围巾手套</li>
+                <li>帽子发饰</li>
+                <li>腰带腕表</li>
+                <li>眼镜墨镜</li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="#">个护清洁</a>
+        <div class="nav2">
+            <ul class="nav2-ul2 left">
+                <h3>当季热销</h3>
+                <li>好物上新</li>
+                <li>热销爆款</li>
+                <li>超低特惠</li>
+                <li>服饰鞋包疯抢74时</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>男装</h3>
+                <li>男式外套</li>
+                <li>男式针织衫/卫衣</li>
+                <li>男式裤装</li>
+                <li>男式衬衫</li>
+                <li>男式牛仔</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>女装</h3>
+                <li>女式外套</li>
+                <li>女式针织衫/卫衣/卫衣</li>
+                <li>女式牛仔</li>
+                <li>女式裤装</li>
+                <li>女式TsAr nOLO</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>运动户外服</h3>
+                <li>女式户外服</li>
+                <li>男式户外服装/卫衣</li>
+                <li>男式运动外套/卫衣</li>
+                <li>男式运动裤装</li>
+                <li>女式运动裤</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>箱包</h3>
+                <li>行李箱</li>
+                <li>女士包袋</li>
+                <li>男士包袋</li>
+                <li>钱包及小皮件</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>首饰配件</h3>
+                <li>奢华珠宝</li>
+                <li>时尚饰品</li>
+                <li>围巾手套</li>
+                <li>帽子发饰</li>
+                <li>腰带腕表</li>
+                <li>眼镜墨镜</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <a href="#">母婴亲子</a>
+        <div class="nav2">
+            <ul class="nav2-ul2 left">
+                <h3>当季热销</h3>
+                <li>好物上新</li>
+                <li>热销爆款</li>
+                <li>超低特惠</li>
+                <li>服饰鞋包疯抢74时</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>男装</h3>
+                <li>男式外套</li>
+                <li>男式针织衫/卫衣</li>
+                <li>男式裤装</li>
+                <li>男式衬衫</li>
+                <li>男式牛仔</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>女装</h3>
+                <li>女式外套</li>
+                <li>女式针织衫/卫衣/卫衣</li>
+                <li>女式牛仔</li>
+                <li>女式裤装</li>
+                <li>女式TsAr nOLO</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>运动户外服</h3>
+                <li>女式户外服</li>
+                <li>男式户外服装/卫衣</li>
+                <li>男式运动外套/卫衣</li>
+                <li>男式运动裤装</li>
+                <li>女式运动裤</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>箱包</h3>
+                <li>行李箱</li>
+                <li>女士包袋</li>
+                <li>男士包袋</li>
+                <li>钱包及小皮件</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>首饰配件</h3>
+                <li>奢华珠宝</li>
+                <li>时尚饰品</li>
+                <li>围巾手套</li>
+                <li>帽子发饰</li>
+                <li>腰带腕表</li>
+                <li>眼镜墨镜</li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="#">运动旅行</a>
+        <div class="nav2">
+            <ul class="nav2-ul2 left">
+                <h3>当季热销</h3>
+                <li>好物上新</li>
+                <li>热销爆款</li>
+                <li>超低特惠</li>
+                <li>服饰鞋包疯抢74时</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>男装</h3>
+                <li>男式外套</li>
+                <li>男式针织衫/卫衣</li>
+                <li>男式裤装</li>
+                <li>男式衬衫</li>
+                <li>男式牛仔</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>女装</h3>
+                <li>女式外套</li>
+                <li>女式针织衫/卫衣/卫衣</li>
+                <li>女式牛仔</li>
+                <li>女式裤装</li>
+                <li>女式TsAr nOLO</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>运动户外服</h3>
+                <li>女式户外服</li>
+                <li>男式户外服装/卫衣</li>
+                <li>男式运动外套/卫衣</li>
+                <li>男式运动裤装</li>
+                <li>女式运动裤</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>箱包</h3>
+                <li>行李箱</li>
+                <li>女士包袋</li>
+                <li>男士包袋</li>
+                <li>钱包及小皮件</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>首饰配件</h3>
+                <li>奢华珠宝</li>
+                <li>时尚饰品</li>
+                <li>围巾手套</li>
+                <li>帽子发饰</li>
+                <li>腰带腕表</li>
+                <li>眼镜墨镜</li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="#">数码家电</a>
+        <div class="nav2">
+            <ul class="nav2-ul2 left">
+                <h3>当季热销</h3>
+                <li>好物上新</li>
+                <li>热销爆款</li>
+                <li>超低特惠</li>
+                <li>服饰鞋包疯抢74时</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>男装</h3>
+                <li>男式外套</li>
+                <li>男式针织衫/卫衣</li>
+                <li>男式裤装</li>
+                <li>男式衬衫</li>
+                <li>男式牛仔</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>女装</h3>
+                <li>女式外套</li>
+                <li>女式针织衫/卫衣/卫衣</li>
+                <li>女式牛仔</li>
+                <li>女式裤装</li>
+                <li>女式TsAr nOLO</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>运动户外服</h3>
+                <li>女式户外服</li>
+                <li>男式户外服装/卫衣</li>
+                <li>男式运动外套/卫衣</li>
+                <li>男式运动裤装</li>
+                <li>女式运动裤</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>箱包</h3>
+                <li>行李箱</li>
+                <li>女士包袋</li>
+                <li>男士包袋</li>
+                <li>钱包及小皮件</li>
+            </ul>
+            <ul class="nav2-ul2 left">
+                <h3>首饰配件</h3>
+                <li>奢华珠宝</li>
+                <li>时尚饰品</li>
+                <li>围巾手套</li>
+                <li>帽子发饰</li>
+                <li>腰带腕表</li>
+                <li>眼镜墨镜</li>
+            </ul>
+        </div>
+    </li>
+    <li><a href="#">严选全球</a></li>
+    <li><a href="#">为你严选</a></li>
+    <li><a href="#">众筹</a></li>
+  </ul>
+  <!-- banner图 -->
+  <div id="banner">
+    <div class="banner">
+        <div class="banner-main">
+            <span class="main-login">登录</span>| <span class="main-sign">注册</span>
+            <div class="banner-form clearfix">
+                <input class="login-txt" type="text" placeholder="请输入账号">
+                <input class="login-pass" type="password" placeholder="请输入密码">
+                <em class="left">登录</em>
+                <b class="right">注册</b>
+            </div>
+            <div class="banner-link">
+                <a href="#"><i class="iconfont icon-weixin"></i></a>
+                <a href="#"><i class="iconfont icon-qq"></i></a>
+                <a href="#"><i class="iconfont icon-weibo"></i></a>
+                <a href="#"><i class="iconfont icon-airudiantubiaohuizhi-zhuanqu_yiwutong"></i></a>
+            </div>
+        </div>
+  </div>
+  </div>
+<!-- serve服务 -->
+<div class="serve">
+    <div class="serve-left left">
+        <h4>客服服务</h4>
+        <span>
+            <a href="#">在线客服</a>
+        </span>
+        <span>
+            <a href="#">用户反馈</a>
+        </span>
+    </div>
+    <div class="serve-center left">
+        <h4>何为优选</h4>
+        <p>网易原创生活类电商品牌，秉承网易—贯的严谨态度，我们深入世界各地，
+            从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品
+        </p>
+        <span>关注我们：</span>
+        <a href="#"><img src="./img/icon_03.jpg" alt=""> </a>
+        <a href="#"><img src="./img/icon_05.jpg" alt=""> </a>
+        <a href="#"><img src="./img/icon_07.jpg" alt=""> </a>
+    </div>
+    <div class="serve-right left">
+        <h4>扫描下载严选APP</h4>
+        <img src="./img/QR1.png" alt="">
+        <div class="serve-right-txt">下载领大额新人红包
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div id="footer">
+    <div class="footer">
+        <div class="footer-header">
+            <div>
+                <img src="./img/footer-icon_03.jpg" alt="">
+                <span>网易自营电商</span>
+            </div>
+            <div>
+                <img src="./img/footer-icon_05.jpg" alt="">
+                <span>30天无忧退货</span>
+            </div>
+            <div>
+                <img src="./img/footer-icon_07.jpg" alt="">
+                <span>满99免包邮</span>
+            </div>
+            <div>
+                <img src="./img/footer-icon_09.jpg" alt="">
+                <span>品质保证</span>
+            </div>
+        </div>
+        <p class="footer-list">
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> |
+            <a href="#">关于我们</a> 
+        </p>
+        <p class="footer-f">
+            食品经营许可证:Y13301080111719 出版物经营许可证:新出发滨字第0132号妙得CP证号:CP证浙(82-20160105浙防食药监械经者备2071029号，营的超、网易公司版权精有◎197-20 <br>
+            无线电发射设备销售备案: 4220201109655(浙杭〉网械企备字[2019]箭00119号(粤)网械平台备字(2019)箭0004号(粤)-非经营性-2016-0023 <br>
+            浙江省网络食品销售第三方平台提供者备案:浙网食A33010009 单用途商业预付卡备案证: 330100AAC0024
+            <a href="#"><img src="./img/footer-f_03.jpg" alt=""></a>
+        </p>
+    </div>
+</div>
+ <!-- 新人福利 -->
+ <div class="scan">
+     <div class="scan-QR">
+         <img src="./img/qr.png" alt="">
+         <span>扫码领APP大额新人红包</span>
+     </div>
+     <div class="scan-serve">
+         <em><img src="./img/serve_03.jpg" alt=""></em>
+         <a href="javascript:;">在线客服</a>
+        </div>
+     <div class="scan-footer">
+         <span></span>
+        <a href="#">回顶部</a>
+     </div>
+ </div>
+<script src="./js/utils.js"></script>
+<script src="./js/login.js"></script>
+</body>
+</html>

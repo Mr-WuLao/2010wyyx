@@ -4,7 +4,9 @@
     margin: 0 auto;
 }
 .details {
-    // position: relative;
+     position: relative;
+     min-height: 520px;
+     margin-top: 20px;
     &-minImg {
         position: relative;
         width: 430px;
@@ -31,12 +33,27 @@
             // border: 1px solid #000;
             overflow: hidden;
             display: none;
+            z-index: 2;
             img {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 860px;
                 height: 860px;
+            }
+        }
+    }
+     ul {
+        position: absolute;
+        top: 450px ;left: 0;
+        li {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-left: 5px;
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -56,6 +73,17 @@
             margin-top: 30px;
             padding-left:10px;
             background: #eee;
+            position: relative;
+            .details-main-time {
+                position: absolute;
+                right: 0; top: 0;
+                width: 345px;
+                height: 50px;
+                .spanTime {
+                    color: red;
+                    font-size: 24px;
+                }
+            }
             .details-p1 {
                 span {
                     font-size: 20px;
@@ -68,7 +96,7 @@
             }
             .details-p2 span{
                     display: inline-block;
-                    background: #ea5946;
+                    background:#E36844;
                     height: 20px;
                     padding: 0 5px;
                     margin: 0 5px 0 20px;
@@ -157,6 +185,7 @@
             line-height: 50px;
             text-align: center;
             background: pink;
+            cursor: pointer;
         }
     }
 }

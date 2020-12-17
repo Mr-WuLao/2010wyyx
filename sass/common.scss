@@ -22,6 +22,7 @@
         li {
             height: 20px;
             border-right: 1px solid #ccc;
+            color: #ccc;
             float: left;
             a {
                 margin: 0 10px;
@@ -33,7 +34,9 @@
                 }
             }
         }
-
+        .header-login {
+            padding-right: 10px;
+        }
     }
     .header-right span {
         margin: 5px 10px 0 0;
@@ -57,7 +60,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0, 0.4);
+    background: rgba(0,0,0, 0.6);
     display: none;
     z-index: 15;
 }
@@ -91,12 +94,13 @@
         margin:15px 0 15px 160px;
     }
     button {
-        width: 100%;
+        width: 40%;
         height: 40px;
-        background: #d97e6f;
+        background: #B4A078;
         line-height: 40px;
         text-align: center;
         border: 0;
+        border-radius: 20px;
     }
     span {
         position: absolute;
@@ -123,13 +127,14 @@
         margin-right: 163px;
     }
     .logo-form {
-        overflow: hidden;
+        position: relative;
+        width: 530px;
         input {
             float: left;
-            height: 36px;
+            height: 38px;
             width: 440px;
             border: 1px solid #cc9756;
-            border-radius: 18px 0 0 18px;
+            border-radius: 19px 0 0 19px;
             padding-left: 25px;
         }
         button {
@@ -143,6 +148,21 @@
             border-radius: 0 20px 20px 0;
             cursor: pointer;
         }
+        .logo-form-search {
+            position: absolute;
+            left: 19px; top: 38px;
+            width: 511px;
+            z-index: 11;
+            &>li {
+                line-height: 40px;
+                background: #ccc;
+                color: #fff;
+                padding-left: 10px;
+                &:hover {
+                    background: #666;
+                }
+            }
+        }
     }
     .logo-shopping {
         border: 1px solid #cc9756;
@@ -154,6 +174,7 @@
         border-radius: 18px;
         background: url(../img/3.png) no-repeat 22px 8px;
         background-position: 14px -140px;
+        cursor: pointer;
         span {
             position: absolute;
             right: 16px;
@@ -167,43 +188,68 @@
             text-align: center;
             color: #fff;
         }
+        /* &:hover {
+            background: #ccc;
+        } */
     }
 }
 /* 导航条nav */
+#list {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
 .nav {
     position: relative;
     z-index: 10;
     height: 31px;
     background: #fff;
-    // overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 .nav>li {
-    height: 28px;
+    // position: relative;
+    height: 31px;
     border-bottom: 3px solid #fff;
-    float: left;
-    margin-right: 45px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
     &>a {
         color: #000;
-        line-height: 28px;
+        line-height: 31px;
         cursor: pointer;
         font-weight: bold;
     }
     .nav2 {
         position: absolute;
-        display: none;
+        top: 31px; left: 0;
+        width: 1090px;
         background: #fff;
+        &-ul2 {
+            margin-right: 10px;
+            display: none;
+            /* display: flex;
+            justify-content: space-between; */
+        }
+        &-ul2>h3 {
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom:1px solid #ccc;
+            height: 30px;
+            line-height: 36px;
+        }
+        &-ul2>li {
+            padding-top: 10px;
+            color: pink;
+            // width: 100px;
+            line-height: 36px;
+        }
     }
 }
-.nav li:hover {
+.nav>li:hover {
     border-color: #cc9756;
     }
-.nav li:hover .nav2 {
+.nav>li:hover .nav2-ul2 {
     display: block;
-    //z-index: 999;
-    } 
-.nav-margin-right {
-    margin-right: 0;
 }
 
 
@@ -256,11 +302,23 @@
             margin-left: 16px;
         }
     }
-    .serve-rigjt {
+    .serve-right {
         width: 362px;
+        img {
+            margin-left: 130px;
+        }
+        .serve-right-txt {
+            margin-top: 5px;
+            padding-left: 120px;
+            color: #FFD2A3;
+            font-size: 14px;
+        }
     }
 }
-/* footer */
+/* footer底部 */
+#footer {
+    background: #414141;
+}
 .footer {
     height: 272px;
     background: #414141;
@@ -303,7 +361,7 @@
     left: 150px;
     top: 620px;
     width: 80px;
-    // height: 350px;
+    background: #fff;
     border: 1px solid #ccc;
     h3 {
         color: red;
@@ -332,6 +390,7 @@
     top: 620px;
      right: 0;
     width: 70px;
+    background: #fff;
     .scan-QR {
         width: 70px;
         img {

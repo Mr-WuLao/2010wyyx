@@ -25,7 +25,7 @@ task('script', async ()=>{
 
 // 处理HTML
 task('html', async ()=>{
-  src('./pages/*.html')
+  src('./pages/*.*')
   .pipe(dest('./dist'))
   .pipe(load.connect.reload())
 })

@@ -332,3 +332,34 @@ function removeCookie(key){
   })
 }
 
+
+
+// count('2020/12/1 :20:16:00')//   活动倒计时  例时间设置
+function count(sum) {
+    function fn(num) {
+       return num >= 10 ? num : '0' + num
+    }
+    let str = ""
+    let newtate = new Date(sum)
+    let newtime = newtate.getTime()
+    let spanTime = document.querySelector('.spanTime')
+    let timer = setInterval(function () {
+        let odate = new Date()
+        let oldtime = odate.getTime()
+        let sub = parseInt((newtime - oldtime)/1000)
+        let limit = sub
+        let day = parseInt(sub / 86400)
+        sub = sub % 86400
+        let hours = parseInt(sub / 3600)
+        sub = sub % 3600
+        let fen = parseInt(sub / 60)
+        sub = sub % 60
+        str = `${fn(day)}天${fn(hours)}小时${fn(fen)}分钟${fn(sub)}秒`
+        spanTime.innerHTML =  str
+        if (limit <= 0) {
+            sub = 0
+            clearInterval(timer)
+            spanTime.innerHTML = '亲，不好意思，该活动结束了'
+        }
+    }, 1000)
+   }

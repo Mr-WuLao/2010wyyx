@@ -5,17 +5,16 @@ var minImg_box = document.querySelector('.details-minImg');
 var details_mask = document.querySelector('.details-mask');
 var bigImg_box = document.querySelector('.details-bigImg');
 var bigImg_img = document.querySelector('.details-bigImg img');
+var imgs = document.querySelectorAll('.details ul li img');
 /* 绑定事件，鼠标移动时，遮罩层跟随一起移动 */
 
 minImg_box.onmousemove = function (eve) {
-  var e = eve || window.event;
-  console.log(e.clientX, e);
+  var e = eve || window.event; // console.log(e.clientX, e)
+
   /* 计算遮罩层的坐标 */
 
   var maskLeft = e.pageX - offset(minImg_box).left - details_mask.clientWidth / 2;
-  var maskTop = e.pageY - offset(minImg_box).top - details_mask.clientHeight / 2;
-  console.log(maskLeft, maskTop); //console.log(details_mask.clientHeight/2, details_mask.clientWidth/2)
-  //console.log(maskLeft,maskTop )
+  var maskTop = e.pageY - offset(minImg_box).top - details_mask.clientHeight / 2; // console.log(offset(minImg_box).left)
 
   /* 判断是否进入边界线 */
 
@@ -58,7 +57,50 @@ minImg_box.onmouseover = function () {
 
 
 minImg_box.onmouseout = function () {
-  console.log('leave');
+  // console.log('leave')
   details_mask.style.display = 'none';
   bigImg_box.style.display = 'none';
+}; // 获取小图下标
+
+
+var minImg = document.querySelector('.details-minImg>img'); //console.log(minImg.src)
+
+var _loop = function _loop(i) {
+  imgs[i].onmouseover = function () {
+    // console.log(imgs[i].src)
+    minImg.src = imgs[i].src; // console.log(minImg.src)
+
+    bigImg_img.src = imgs[i].src;
+  };
 };
+
+for (var i = 0; i < imgs.length; i++) {
+  _loop(i);
+} // 获取增减点击事件
+
+
+var detailsLose = document.querySelector('.lose');
+var detailsAdd = document.querySelector('.details-add');
+var num = document.querySelector('.details-num span');
+
+detailsLose.onclick = function () {
+  if (num.innerHTML > 0) {
+    num.innerHTML--;
+  } else {
+    num.innerHTML = 0;
+  }
+};
+
+detailsAdd.onclick = function () {
+  num.innerHTML++;
+}; // 活动倒计时
+
+
+window.onload = function () {
+  count('2021/2/5 :00:00:00');
+}; //点击加入购物车事件
+
+
+var detailsShopping = document.querySelector('.details-goShopping');
+
+detailsShopping.onclick = function () {};

@@ -67,5 +67,13 @@ body {
           text-align: center;
           line-height: 48px;
           color: #999; }
-      .main .main-show dl:hover dd, .main .main-show dl:hover dt {
+        .main .main-show dl dd i {
+          background: red;
+          color: #fff;
+          text-align: center;
+          line-height: 40px;
+          font-size: 20px;
+          margin-left: 70px;
+          cursor: pointer; }
+      .main .main-show dl:hover {
         background: #ccc; }

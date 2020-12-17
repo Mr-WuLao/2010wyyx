@@ -360,4 +360,36 @@ function removeCookie(key) {
     val: '123',
     days: -2
   });
+} // count('2020/12/1 :20:16:00')//   活动倒计时  例时间设置
+
+
+function count(sum) {
+  function fn(num) {
+    return num >= 10 ? num : '0' + num;
+  }
+
+  var str = "";
+  var newtate = new Date(sum);
+  var newtime = newtate.getTime();
+  var spanTime = document.querySelector('.spanTime');
+  var timer = setInterval(function () {
+    var odate = new Date();
+    var oldtime = odate.getTime();
+    var sub = parseInt((newtime - oldtime) / 1000);
+    var limit = sub;
+    var day = parseInt(sub / 86400);
+    sub = sub % 86400;
+    var hours = parseInt(sub / 3600);
+    sub = sub % 3600;
+    var fen = parseInt(sub / 60);
+    sub = sub % 60;
+    str = "".concat(fn(day), "\u5929").concat(fn(hours), "\u5C0F\u65F6").concat(fn(fen), "\u5206\u949F").concat(fn(sub), "\u79D2");
+    spanTime.innerHTML = str;
+
+    if (limit <= 0) {
+      sub = 0;
+      clearInterval(timer);
+      spanTime.innerHTML = '亲，不好意思，该活动结束了';
+    }
+  }, 1000);
 }

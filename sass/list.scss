@@ -76,8 +76,17 @@ body {
                     line-height: 48px;
                     color: #999;
                 }
+                i {
+                    background: red;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 20px;
+                    margin-left:70px;
+                    cursor: pointer;
+                }
             }
-            &:hover dd, &:hover dt {
+            &:hover {
                 background: #ccc;
             }
         }

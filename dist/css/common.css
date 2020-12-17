@@ -22,6 +22,7 @@
     .header .header-right li {
       height: 20px;
       border-right: 1px solid #ccc;
+      color: #ccc;
       float: left; }
       .header .header-right li a {
         margin: 0 10px;
@@ -30,6 +31,8 @@
         text-decoration: none; }
         .header .header-right li a:hover {
           color: #fff; }
+    .header .header-right .header-login {
+      padding-right: 10px; }
   .header .header-right span {
     margin: 5px 10px 0 0;
     display: inline-block;
@@ -47,7 +50,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   z-index: 15; }
 
@@ -80,12 +83,13 @@
     text-align: right;
     margin: 15px 0 15px 160px; }
   .login button {
-    width: 100%;
+    width: 40%;
     height: 40px;
-    background: #d97e6f;
+    background: #B4A078;
     line-height: 40px;
     text-align: center;
-    border: 0; }
+    border: 0;
+    border-radius: 20px; }
   .login span {
     position: absolute;
     top: 10px;
@@ -109,13 +113,14 @@
     background-position: -1px -303px;
     margin-right: 163px; }
   .logo .logo-form {
-    overflow: hidden; }
+    position: relative;
+    width: 530px; }
     .logo .logo-form input {
       float: left;
-      height: 36px;
+      height: 38px;
       width: 440px;
       border: 1px solid #cc9756;
-      border-radius: 18px 0 0 18px;
+      border-radius: 19px 0 0 19px;
       padding-left: 25px; }
     .logo .logo-form button {
       float: left;
@@ -127,6 +132,19 @@
       border: 0;
       border-radius: 0 20px 20px 0;
       cursor: pointer; }
+    .logo .logo-form .logo-form-search {
+      position: absolute;
+      left: 19px;
+      top: 38px;
+      width: 511px;
+      z-index: 11; }
+      .logo .logo-form .logo-form-search > li {
+        line-height: 40px;
+        background: #ccc;
+        color: #fff;
+        padding-left: 10px; }
+        .logo .logo-form .logo-form-search > li:hover {
+          background: #666; }
   .logo .logo-shopping {
     border: 1px solid #cc9756;
     width: 132px;
@@ -136,7 +154,11 @@
     line-height: 36px;
     border-radius: 18px;
     background: url(../img/3.png) no-repeat 22px 8px;
-    background-position: 14px -140px; }
+    background-position: 14px -140px;
+    cursor: pointer;
+    /* &:hover {
+            background: #ccc;
+        } */ }
     .logo .logo-shopping span {
       position: absolute;
       right: 16px;
@@ -151,36 +173,56 @@
       color: #fff; }
 
 /* 导航条nav */
+#list {
+  width: 100%;
+  border-bottom: 1px solid #ccc; }
+
 .nav {
   position: relative;
   z-index: 10;
   height: 31px;
-  background: #fff; }
+  background: #fff;
+  display: flex;
+  justify-content: space-between; }
 
 .nav > li {
-  height: 28px;
+  height: 31px;
   border-bottom: 3px solid #fff;
-  float: left;
-  margin-right: 45px;
-  position: relative; }
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer; }
   .nav > li > a {
     color: #000;
-    line-height: 28px;
+    line-height: 31px;
     cursor: pointer;
     font-weight: bold; }
   .nav > li .nav2 {
     position: absolute;
-    display: none;
+    top: 31px;
+    left: 0;
+    width: 1090px;
     background: #fff; }
+    .nav > li .nav2-ul2 {
+      margin-right: 10px;
+      display: none;
+      /* display: flex;
+            justify-content: space-between; */ }
+    .nav > li .nav2-ul2 > h3 {
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      height: 30px;
+      line-height: 36px; }
+    .nav > li .nav2-ul2 > li {
+      padding-top: 10px;
+      color: pink;
+      line-height: 36px; }
 
-.nav li:hover {
+.nav > li:hover {
   border-color: #cc9756; }
 
-.nav li:hover .nav2 {
+.nav > li:hover .nav2-ul2 {
   display: block; }
-
-.nav-margin-right {
-  margin-right: 0; }
 
 /* serve 服务*/
 .serve {
@@ -221,10 +263,20 @@
       line-height: 36px; }
     .serve .serve-center a {
       margin-left: 16px; }
-  .serve .serve-rigjt {
+  .serve .serve-right {
     width: 362px; }
+    .serve .serve-right img {
+      margin-left: 130px; }
+    .serve .serve-right .serve-right-txt {
+      margin-top: 5px;
+      padding-left: 120px;
+      color: #FFD2A3;
+      font-size: 14px; }
 
-/* footer */
+/* footer底部 */
+#footer {
+  background: #414141; }
+
 .footer {
   height: 272px;
   background: #414141;
@@ -260,6 +312,7 @@
   left: 150px;
   top: 620px;
   width: 80px;
+  background: #fff;
   border: 1px solid #ccc; }
   .hotList h3 {
     color: red;
@@ -283,7 +336,8 @@
   position: absolute;
   top: 620px;
   right: 0;
-  width: 70px; }
+  width: 70px;
+  background: #fff; }
   .scan .scan-QR {
     width: 70px; }
     .scan .scan-QR img {

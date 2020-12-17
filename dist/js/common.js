@@ -1,69 +1,14 @@
 "use strict";
 
-/* 登录模块 */
-var logins = document.querySelector('.header-login');
-var mask = document.querySelector('.header-mask');
-var login = document.querySelector('.login');
-var close = document.querySelector('.close');
-var login_txt = document.querySelector('.login-txt');
-var login_password = document.querySelector('.login-password');
-var login_btn = document.querySelector('.login-btn');
-var checkbox = document.querySelector('.login-checkbox');
-/* 点击登录注册按钮弹出登陆界面 */
-
-logins.onclick = function () {
-  mask.style.display = 'block';
-  login.style.display = 'block';
-
-  if (getCookie('name')) {
-    login_txt.value = getCookie('name');
-    login_password.value = getCookie('password');
-    checkbox.checked = true;
-  }
-}; //console.log(login_txt)
-
-
-close.onclick = function () {
-  mask.style.display = 'none';
-  login.style.display = 'none';
-};
-
-login_btn.onclick = function () {
-  if (checkbox.checked) {
-    //判断是否勾选密码
-    //console.log(login_txt.value)
-    setCookie({
-      key: 'name',
-      val: login_txt.value,
-      days: 7
-    });
-    setCookie({
-      key: 'password',
-      val: login_password.value,
-      days: 7
-    });
-    alert('登陆成功');
-  } else {
-    //没有勾选
-    login_txt.value = '';
-    login_password.value = '';
-    removeCookie('name');
-    removeCookie('password');
-    alert('登陆成功');
-  }
-};
 /* 热销榜 */
-
-/* <!-- 新人福利 --> */
-
-
-var scan = document.querySelector('.scan');
 var hotList = document.querySelector('.hotList');
+/* 获取热销榜 */
+
 /* 获取元素最开始的top值 */
 
-var hotlistW = offset(hotList).top; // console.log(hotlistW)
+var hotlistW = offset(hotList).top; //console.log(hotlistW)
 
-window.onscroll = function () {
+window.addEventListener('scroll', function () {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
   if (hotlistW <= scrollTop) {
@@ -71,4 +16,48 @@ window.onscroll = function () {
     scan.style.top = scrollTop + 'px';
     hotList.style.top = scrollTop + 'px';
   }
-};
+});
+/* 新人福利 */
+
+var scan = document.querySelector('.scan');
+var hotlistW1 = offset(scan).top;
+window.addEventListener('scroll', function () {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (hotlistW1 <= scrollTop) {
+    /* 当符合条件，则产生吸顶效果 */
+    scan.style.top = scrollTop + 'px';
+  }
+}); //点击登录注册按钮跳转到登录页面
+
+var header_login = document.querySelector('.header-login');
+header_login.addEventListener('click', function () {
+  location.href = './login.html';
+}); //搜索框搜索功能，这里没有数据接口，所以使用了百度搜索框接口
+
+var logo_form = document.querySelector('.logo-form');
+var search = document.querySelector('.logo-form>input');
+var search_show = document.querySelector('.logo-form-search');
+search.addEventListener('input', function () {
+  var oScript = document.createElement('script');
+  oScript.src = 'http://suggestion.baidu.com/su?cb=callback&wd=' + search.value;
+  document.body.appendChild(oScript);
+
+  oScript.onload = function () {
+    document.body.removeChild(oScript);
+  };
+
+  if (search.value == '') {
+    console.log(111);
+    search_show.style.display = 'none';
+  }
+});
+
+function callback(json) {
+  console.log(json);
+  var str = '';
+  json.s.forEach(function (item) {
+    str += "<li>".concat(item, "</li>");
+  });
+  search_show.innerHTML = str;
+}

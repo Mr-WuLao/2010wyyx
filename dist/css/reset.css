@@ -30,7 +30,7 @@ img {
   border: 0;
   vertical-align: middle; }
 
-input {
+input, button {
   outline: none; }
 
 /* 公共样式 */
