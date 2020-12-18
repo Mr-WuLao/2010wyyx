@@ -38,6 +38,7 @@ login_login.addEventListener('click', function () {
     dataType: 'json',
     success: function success(json) {
       alert(json.msg);
+      location.href = './index1.html'
     },
     error: function error(code) {
       alert(code);

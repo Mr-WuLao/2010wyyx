@@ -16,7 +16,7 @@ $(function () {
         $.each(goodsArr, function (index, item) {
           $.each(json, function (ind, obj) {
             if (item.code === obj.code) {
-              domStr += "\n                        <div class=\"shopping-main-list\">\n                            <input class=\"left shopping-main-input\" type=\"checkbox\">\n                            <div class=\"shopping-main-img left\">\n                                <img src=\"".concat(obj.imgurl, "\" alt=\"\">\n                            </div>\n                            <div class=\"shopping-main-text left\">\n                                <a>").concat(obj.title, "</a>\n                            </div>\n                            <div class=\"shopping-main-price left\">\uFFE5<b>").concat(obj.price, "</b></div>\n                            <div class=\"shopping-main-num clearfix left\">\n                                <em class=\"shopping-main-lose left\"> - </em>\n                                <span class=\"left\">").concat(item.num, "</span>\n                                <em class=\"shopping-main-add left\">+</em>\n                            </div>\n                            <div class=\"shopping-main-sum left\">\uFFE5<b>0</b></div>\n                            <div code=").concat(obj.code, " class=\"shopping-main-del left\">\u5220\u9664</div>\n                        </div>\n                            ");
+              domStr += "\n                        <div class=\"shopping-main-list \" code = \"".concat(obj.code, "\">\n                            <input class=\"left shopping-main-input\" type=\"checkbox\">\n                            <div class=\"shopping-main-img left\">\n                                <img src=\"").concat(obj.imgurl, "\" alt=\"\">\n                            </div>\n                            <div class=\"shopping-main-text left\">\n                                <a>").concat(obj.title, "</a>\n                            </div>\n                            <div class=\"shopping-main-price left\">\uFFE5<b>").concat(obj.price, "</b></div>\n                            <div class=\"shopping-main-num clearfix left\">\n                                <em class=\"shopping-main-lose left\"> - </em>\n                                <span class=\"left\">").concat(item.num, "</span>\n                                <em class=\"shopping-main-add left\">+</em>\n                            </div>\n                            <div class=\"shopping-main-sum left\">\uFFE5<b>0</b></div>\n                            <div code=").concat(obj.code, " class=\"shopping-main-del left\">\u5220\u9664</div>\n                        </div>\n                            ");
             }
           });
         });
@@ -141,8 +141,7 @@ $(function () {
 
     var shopping_main = document.querySelector('.shopping-main');
     shopping_main.addEventListener('click', function (eve) {
-      var e = eve || window.event;
-      console.log(e.target);
+      var e = eve || window.event; // console.log(e.target)
 
       if (e.target.tagName == 'INPUT') {
         var moneyAll = Number($('.shopping-total-money em b').html());
@@ -153,6 +152,35 @@ $(function () {
 
         $('.shopping-total-money em b').html(moneyAll);
       }
+    }); //   结账付款
+
+    var goodsArr = JSON.parse(localStorage.getItem('goods'));
+    var total_add = document.querySelector('.shopping-total-add');
+    total_add.addEventListener('click', function () {
+      //  显示付款价格
+      alert('一共花费' + Number($('.shopping-total-money em b').html()) + '元'); // 当复选框选中时，删除该列表
+
+      var checkboxs = document.querySelectorAll('.shopping-main-input');
+
+      for (var i = 0; i < checkboxs.length; i++) {
+        if (checkboxs[i].checked) {
+          checkboxs[i].parentNode.remove(); //更新本地数据
+
+          var code = checkboxs[i].parentNode.getAttribute('code');
+          console.log(code);
+          $.each(goodsArr, function (index, item) {
+            if (item.code === code) {
+              goodsArr.splice(index, 1); //删除该商品编号
+              // console.log(111)
+
+              localStorage.setItem('goods', JSON.stringify(goodsArr));
+            }
+          });
+        }
+      }
+
+      var moneyReset = document.querySelector('.shopping-total-money em b');
+      moneyReset.innerHTML = 0;
     });
   }
 });

@@ -82,3 +82,20 @@ detailsShopping.onclick = function () {
     
 }
 
+// 详情，，，评价，，，，常见问题之间的数据切换
+let h4s = document.querySelectorAll('.message-tab h4')
+let show = document.querySelectorAll('.message-tab-show div')
+// console.log(show)
+let prevIndex = 0 //保存上次选中的下标
+for( let i = 0; i < h4s.length; i++) {
+    h4s[i].index = i
+    // 获取当前点击选择的下标
+    h4s[i].onclick = function (){
+        // console.log(111)
+    h4s[prevIndex].className = ''
+    show[prevIndex].className = ''
+    h4s[this.index].className = 'active'
+    show[this.index].className = 'message-tab-shows'
+    prevIndex = this.index
+    }
+}

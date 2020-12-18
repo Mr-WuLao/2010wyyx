@@ -35,6 +35,7 @@ let logo_form = document.querySelector('.logo-form')
 let search = document.querySelector('.logo-form>input')
 let search_show = document.querySelector('.logo-form-search')
 search.addEventListener('input', function() {
+    // 创建script标签
     let oScript = document.createElement('script')
     oScript.src = 'http://suggestion.baidu.com/su?cb=callback&wd=' + search.value
     document.body.appendChild(oScript)
@@ -42,12 +43,13 @@ search.addEventListener('input', function() {
         document.body.removeChild(oScript)
     }
     if (search.value == '') {
-        console.log(111)
+        // 当搜索框里没有值时，隐藏显示的列表
         search_show.style.display = 'none'
     }
 })
+// 将获得的值放到ul标签里
 function callback(json) {
-    console.log(json)
+    // console.log(json)
     let str = ''
     json.s.forEach(function (item) {
         str += `<li>${item}</li>`

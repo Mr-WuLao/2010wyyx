@@ -36,7 +36,21 @@ mySwiper.el.onmouseover = function(){
         type: 'get',
         dataType: 'json',
         success: function(json) {
-            console.log(json)
+           // console.log(json)
+           var domStr = ''
+           $.each(json, function (index, item) {
+               domStr += `
+               <dl class="case-imgs">
+               <dt code = "${item.code}"><img src="${item.imgurl}" alt=""></dt>
+               <dd>
+                   <i>特价</i>
+                   <p>${item.title}</p>
+                   <span>￥${item.price}<em>￥${item.price1}</em></span>
+               </dd>
+           </dl>
+               `
+           })
+           case_main.innerHTML = domStr
         }
     })
   })

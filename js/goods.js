@@ -5,7 +5,7 @@ $(function () {
         let goodsArr = JSON.parse(localStorage.getItem('goods'))
         // console.log(goodsArr)
         // 获取数据
-        $.ajax({
+        $.ajax ({
             url: './img/goods.json',
             type: 'get',
             dataType: 'json',
@@ -15,7 +15,7 @@ $(function () {
                     $.each(json, function(ind, obj) {
                         if(item.code === obj.code) {
                             domStr += `
-                        <div class="shopping-main-list">
+                        <div class="shopping-main-list " code = "${obj.code}">
                             <input class="left shopping-main-input" type="checkbox">
                             <div class="shopping-main-img left">
                                 <img src="${obj.imgurl}" alt="">
@@ -154,7 +154,7 @@ $(function () {
          let shopping_main = document.querySelector('.shopping-main')
         shopping_main.addEventListener('click', function (eve) {
             let e = eve || window.event
-            console.log(e.target)
+            // console.log(e.target)
             if (e.target.tagName == 'INPUT') {
             let moneyAll = Number($('.shopping-total-money em b').html())
             if (e.target.checked) {
@@ -164,7 +164,32 @@ $(function () {
             }
         })
 
-      
+    //   结账付款
+    let goodsArr = JSON.parse(localStorage.getItem('goods'))
+    let total_add = document.querySelector('.shopping-total-add')
+     total_add.addEventListener('click', function () {
+        //  显示付款价格
+         alert('一共花费' + Number($('.shopping-total-money em b').html()) + '元')
+        // 当复选框选中时，删除该列表
+         let checkboxs = document.querySelectorAll('.shopping-main-input')
+         for( let i = 0; i < checkboxs.length; i++) {
+            if(checkboxs[i].checked) {
+                checkboxs[i].parentNode.remove()
+                //更新本地数据
+                var code = checkboxs[i].parentNode.getAttribute('code')
+                console.log(code)
+            $.each(goodsArr, function(index, item) {
+                if (item.code === code) {
+                    goodsArr.splice(index, 1)  //删除该商品编号
+                    // console.log(111)
+                    localStorage.setItem('goods', JSON.stringify(goodsArr))
+                }
+            })
+            }
+        }
+        let moneyReset = document.querySelector('.shopping-total-money em b')
+            moneyReset.innerHTML = 0
+        })
     }
 
 })

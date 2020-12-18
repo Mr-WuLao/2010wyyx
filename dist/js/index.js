@@ -41,7 +41,12 @@ $(function () {
     type: 'get',
     dataType: 'json',
     success: function success(json) {
-      console.log(json);
+      // console.log(json)
+      var domStr = '';
+      $.each(json, function (index, item) {
+        domStr += "\n               <dl class=\"case-imgs\">\n               <dt code = \"".concat(item.code, "\"><img src=\"").concat(item.imgurl, "\" alt=\"\"></dt>\n               <dd>\n                   <i>\u7279\u4EF7</i>\n                   <p>").concat(item.title, "</p>\n                   <span>\uFFE5").concat(item.price, "<em>\uFFE5").concat(item.price1, "</em></span>\n               </dd>\n           </dl>\n               ");
+      });
+      case_main.innerHTML = domStr;
     }
   });
 });

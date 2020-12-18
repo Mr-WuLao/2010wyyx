@@ -50,6 +50,7 @@
         background: #f4f4f4; }
       .case .case-main .case-imgs dd {
         padding-top: 34px;
+        padding-bottom: 34px;
         width: 100%; }
         .case .case-main .case-imgs dd i {
           font-size: 16px;
@@ -66,11 +67,12 @@
           text-align: center;
           display: block;
           color: red;
-          font-size: 16px; }
+          font-size: 20px; }
           .case .case-main .case-imgs dd span em {
             text-decoration: line-through;
             font-size: 12px;
-            color: #ccc; }
+            color: #ccc;
+            padding-left: 10px; }
       .case .case-main .case-imgs:hover dd {
         background: #F4F0EA; }
 

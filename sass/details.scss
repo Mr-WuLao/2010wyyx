@@ -1,5 +1,5 @@
 /* 公共样式 */
-.details {
+.details, .message {
     width: 1090px;
     margin: 0 auto;
 }
@@ -188,4 +188,50 @@
             cursor: pointer;
         }
     }
+}
+// 商品简介
+.message {
+    margin-top: 80px;
+    .message-tab {
+        height: 43px;
+        width: 680px;
+        background: #F5F5F5;
+        h4 {
+            padding: 0 20px;
+            float: left;
+            line-height: 40px;
+            border-right: 1px solid #fff;
+            border-top: 3px solid #F5F5F5;
+        }
+        .active {
+            border-top: 3px solid #B4A078;
+            color: #B4A078;
+            background: #fff;
+        }
+    }
+    .message-tab-show>div {
+        display: none;
+        overflow: hidden;
+        min-height: 260px;
+    }
+    .message-main .message-tab-shows {
+        display: block;
+        p { 
+            overflow: hidden;
+            border-bottom:1px solid #eee;
+            color: #999999;
+            &>span {
+                padding-left: 15px;
+                padding-top: 5px;
+                float: left;
+                width: 110px;
+                color: #000;
+            }
+            &>em {
+                float: left;
+                line-height: 32px;
+            }
+        }
+    }
+    
 }
